@@ -40,8 +40,8 @@ export class RoutesController {
     }
 
     private basicAuth(authHeader: string): boolean {
-        const username = process.env.LOGIN;
-        const password = process.env.PASSWORD;
+        const username = "login123";
+        const password = "password123";
         const base64Credentials = Buffer.from(`${username}:${password}`).toString("base64");
         const expectedAuthHeader = base64Credentials;
         return authHeader === expectedAuthHeader;
